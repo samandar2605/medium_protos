@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package genproto;
+
+option go_package="genproto/notification_service";
+
+message SendEmailRequest {
+    string to =1;
+    string type =2;
+    string subject=3;
+    map<string, string> body=4;
+}
+message Empty {}
+
+service NotificationService {
+    rpc SendEmail(SendEmailRequest) returns (Empty) {}
+}
