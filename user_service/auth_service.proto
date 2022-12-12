@@ -25,12 +25,9 @@ message AuthResponse {
     int64 ID = 1;   
     string FirstName = 2;
     string LastName = 3;
-    string ProfileImageUrl = 4;
-    string Username = 5; 
-    string Password =6;
-    string Email = 7;
-    string PhoneNumber = 8;
-    string Type = 9;
-    string CreatedAt = 10;
-    string AccessToken = 11;
+    string Username = 4; 
+    string Email = 5;
+    string Type = 6;
+    string CreatedAt = 7;
+    string AccessToken = 8;
 }
