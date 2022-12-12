@@ -5,7 +5,8 @@ package genproto;
 option go_package="genproto/user_service";
 import "user.proto";
 service AuthService{
-    rpc Register(RegisterRequest)returns (Empty){}
+    rpc Register(RegisterRequest)returns (Empty){};
+    rpc Verify(VerifyRequest) returns (AuthResponse){};
 }
 
 message RegisterRequest {
@@ -13,4 +14,23 @@ message RegisterRequest {
     string last_name=2;
     string email=3;
     string password=4;
+}
+
+message VerifyRequest {
+    string email = 1;
+    string code = 2;
+}
+
+message AuthResponse {
+    int64 ID = 1;   
+    string FirstName = 2;
+    string LastName = 3;
+    string ProfileImageUrl = 4;
+    string Username = 5; 
+    string Password =6;
+    string Email = 7;
+    string PhoneNumber = 8;
+    string Type = 9;
+    string CreatedAt = 10;
+    string AccessToken = 11;
 }
