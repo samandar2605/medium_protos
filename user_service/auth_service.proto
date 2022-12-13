@@ -46,5 +46,3 @@ message AuthPayload {
 	string issued_at = 5;
     string expired_at = 6;
 }
-
-
