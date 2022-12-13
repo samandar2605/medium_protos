@@ -7,7 +7,13 @@ import "user.proto";
 service AuthService{
     rpc Register(RegisterRequest)returns (Empty){};
     rpc Verify(VerifyRequest) returns (AuthResponse){};
+    rpc UpdatePassword(NewPassword) returns (Empty){};
 }
+
+message NewPassword{
+    string password =1;
+}
+
 
 message RegisterRequest {
     string first_name=1;
