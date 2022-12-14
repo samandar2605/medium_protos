@@ -4,17 +4,9 @@ package genproto;
 
 option go_package="genproto/post_service";
 
+import "category.proto";
+
 service CategoryService {
-    rpc Create(Category) returns (Category){}
-    rpc Get(GetCategoryRequest) returns (Category){}
-}
-
-message Category {
-    int64 id = 1;
-    string title = 2;
-    string created_at = 3;
-}
-
-message GetCategoryRequest {
-    int64 id = 1;
+    rpc Create(Category) returns (Category) {}
+    rpc Get(GetCategoryRequest) returns (Category) {}
 }
