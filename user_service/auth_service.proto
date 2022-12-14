@@ -9,15 +9,10 @@ service AuthService{
     rpc Verify(VerifyRequest) returns (AuthResponse){};
     rpc Login(VerifyRequest) returns (AuthResponse){};
     rpc ForgotPassword(UserEmail) returns (Empty){};
+    rpc VerifyToken(VerifyTokenRequest)returns()
     rpc VerifyForgotPassword(VerifyRequest) returns (AuthResponse){};
-    rpc UpdatePassword(NewPassword) returns (Empty){};
 }
 
-
-
-message NewPassword{
-    string password = 1;
-}
 message UserEmail{
     string email = 1;
 }
@@ -41,8 +36,9 @@ message AuthResponse {
 	string email = 4;
 	string username = 5;
 	string type = 6;
-	string created_at = 7;
-	string access_token = 8;
+    string password = 7;
+	string created_at = 8;
+	string access_token = 9;
 }
 
 message VerifyTokenRequest {
