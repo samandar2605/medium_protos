@@ -9,9 +9,10 @@ service AuthService{
     rpc Verify(VerifyRequest) returns (AuthResponse){};
     rpc Login(VerifyRequest) returns (AuthResponse){};
     rpc ForgotPassword(UserEmail) returns (Empty){};
-    rpc VerifyToken(VerifyTokenRequest)returns()
+    rpc VerifyToken(VerifyTokenRequest)returns(AuthPayload){};
     rpc VerifyForgotPassword(VerifyRequest) returns (AuthResponse){};
 }
+
 
 message UserEmail{
     string email = 1;
