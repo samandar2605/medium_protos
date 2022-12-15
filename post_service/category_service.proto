@@ -8,5 +8,8 @@ import "category.proto";
 
 service CategoryService {
     rpc Create(Category) returns (Category) {}
-    rpc Get(GetCategoryRequest) returns (Category) {}
+    rpc Get(IdRequest) returns (Category) {}
+    rpc GetAll(GetCategoryRequest) returns (GetCategoryResponse) {}
+    rpc Update(Category) returns (Category){}
+    rpc Delete(IdRequest) returns (Empty){}
 }

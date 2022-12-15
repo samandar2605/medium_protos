@@ -4,12 +4,25 @@ package genproto;
 
 option go_package="genproto/post_service";
 
+message Empty{};
+
 message Category {
     int64 id = 1;
     string title = 2;
     string created_at = 3;
 }
 
-message GetCategoryRequest {
+message IdRequest {
     int64 id = 1;
+}
+
+message GetCategoryRequest{
+    int32 page = 1;
+    int32 limit = 2;
+    string search =3;
+}
+
+message GetCategoryResponse{
+    repeated Category Categories = 1;
+    int32 count = 2;
 }

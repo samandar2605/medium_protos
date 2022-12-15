@@ -19,3 +19,19 @@ message Post {
 message GetPostRequest {
     int64 id = 1;
 }
+
+
+message GetAllPostsRequest {
+    int32 page = 1;
+    int32 limit = 2;
+    int64 user_id = 3;
+    int32 category_id = 4;
+    string sort_by_date = 5;
+}
+message GetAllPostsResponse{
+    repeated Post posts = 1;
+    int64 count = 2;
+}
+
+
+
