@@ -6,10 +6,10 @@ option go_package="genproto/notification_service";
 
 
 service NotificationService {
-    rpc SendEmail(SendEmailRequest) returns (Vacant) {}
+    rpc SendEmail(SendEmailRequest) returns (Unoccupied) {}
 }
 
-message Vacant{}
+message Unoccupied{}
 
 message SendEmailRequest {
     string to = 1;
