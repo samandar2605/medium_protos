@@ -5,10 +5,14 @@ package genproto;
 option go_package="genproto/post_service";
 
 service LikeService {
-    rpc CreateOrUpdateLike(CreateOrUpdateLikeRequest)returns{}
-    rpc GetLike(Get)returns Like{}
+    rpc CreateOrUpdateLike(CreateOrUpdateLikeRequest)returns(Pustoy){}
+    rpc GetLike(Get)returns (CreateOrUpdateLikeRequest){}
     rpc GetAllLik(GetAllRequest)returns(GetAllResponse){}
 }
+
+message Pustoy{}
+
+
 
 
 message CreateOrUpdateLikeRequest{
