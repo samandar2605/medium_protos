@@ -11,8 +11,8 @@ service AuthService{
     rpc ForgotPassword(UserEmail) returns (Empty){};
     rpc VerifyToken(VerifyTokenRequest)returns(AuthPayload){};
     rpc VerifyForgotPassword(VerifyRequest) returns (AuthResponse){};
+    rpc CheckPermission(CheckPermissionRequest) returns (CheckPermissionResponse){}
 }
-
 
 message UserEmail{
     string email = 1;
@@ -46,6 +46,8 @@ message AuthResponse {
 
 message VerifyTokenRequest {
     string access_token = 1;
+    string resource = 2;
+    string action = 3;
 }
 
 message AuthPayload {
@@ -56,4 +58,5 @@ message AuthPayload {
 	string issued_at = 5;
     string expired_at = 6;
     string password = 7;
+    bool has_permission=8;
 }
