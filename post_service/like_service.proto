@@ -12,23 +12,20 @@ service LikeService {
 
 message Pustoy{}
 
-
-
-
 message CreateOrUpdateLikeRequest{
-    string id=1;
-    string post_id=2;
-    string user_id=3;
+    int64 id=1;
+    int64 post_id=2;
+    int64 user_id=3;
     bool status=4;
 }
 
 message Get{
-    string user_id=1;
-    string post_id=2;
+    int64 user_id=1;
+    int64 post_id=2;
 }
 
 message GetAllRequest{
-    string post_id=1;
+    int64 post_id=1;
 }
 
 message GetAllResponse{
