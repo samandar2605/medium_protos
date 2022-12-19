@@ -13,4 +13,5 @@ service PostService {
     rpc GetAll(GetAllPostsRequest) returns (GetAllPostsResponse){}
     rpc Update(Post) returns (Post){}
     rpc Delete(GetPostRequest) returns (Blank){}
+    rpc ViewInc(GetPostRequest)returns(Blank){}
 }
