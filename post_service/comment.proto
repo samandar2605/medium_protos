@@ -32,7 +32,7 @@ message GetCommentQuery {
     string sort_by_date = 5;
 }
 
-message GetAllCOmmentsResult {
+message GetAllCommentsResult {
     repeated Comment comments = 1;
     int64 count = 2;
 }

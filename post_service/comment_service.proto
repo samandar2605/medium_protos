@@ -9,7 +9,7 @@ import "comment.proto";
 service CommentService {
     rpc Create(CreateComment) returns (Comment) {}
     rpc Get(IdWithRequest) returns (Comment) {}
-    rpc GetAll(GetCommentQuery) returns (GetAllCOmmentsResult){}
+    rpc GetAll(GetCommentQuery) returns (GetAllCommentsResult){}
     rpc Update(Comment) returns (Comment){}
     rpc Delete(IdWithRequest) returns (boosh){}
 }
