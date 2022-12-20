@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package genproto;
+
+option go_package="genproto/post_service";
+
+message Comment{
+    int64 id = 1;
+    int64 post_id = 2;
+    int64 user_id = 3;
+    string description = 4;
+    string created_at = 5;
+    string updated_at = 6;
+}
+message IdWithRequest{
+    int64 id = 1;
+}
+message boosh{}
+
+message CreateComment{
+    int64 post_id = 1;
+    int64 user_id = 2;
+    string description = 3;
+}
+
+
+message GetCommentQuery {
+    int64 page =1;
+    int64 limit = 2;
+    int64 post_id = 3;
+    int64 user_id = 4;
+    string sort_by_date = 5;
+}
+
+message GetAllCOmmentsResult {
+    repeated Comment comments = 1;
+    int64 count = 2;
+}
+
