@@ -16,6 +16,14 @@ message Post {
     int32 views_count = 9;
 }
 
+message CreatePost {
+    string title = 2;
+    string description = 3;
+    string image_url = 4;
+    int64 user_id = 5;
+    int64 category_id = 6;
+}
+
 message GetPostRequest {
     int64 id = 1;
 }

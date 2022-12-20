@@ -8,7 +8,7 @@ import "post.proto";
 import "category.proto";
 
 service PostService {
-    rpc Create(Post) returns (Post) {}
+    rpc Create(CreatePost) returns (Post) {}
     rpc Get(GetPostRequest) returns (Post) {}
     rpc GetAll(GetAllPostsRequest) returns (GetAllPostsResponse){}
     rpc Update(Post) returns (Post){}
