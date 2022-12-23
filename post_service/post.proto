@@ -24,6 +24,13 @@ message CreatePost {
     int64 category_id = 5;
 }
 
+message ChangePost {
+    int64 id = 1;
+    string title = 2;
+    string description = 3;
+    string image_url = 4;
+}
+
 message GetPostRequest {
     int64 id = 1;
 }
@@ -39,6 +46,7 @@ message GetAllPostsResponse{
     repeated Post posts = 1;
     int64 count = 2;
 }
+
 
 
 
