@@ -17,7 +17,7 @@ message IdWithRequest{
 }
 message boosh{}
 
-message CreateComment{
+message CreateCommentRequest{
     int64 post_id = 1;
     int64 user_id = 2;
     string description = 3;

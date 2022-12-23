@@ -7,7 +7,7 @@ option go_package="genproto/post_service";
 import "comment.proto";
 
 service CommentService {
-    rpc Create(CreateComment) returns (Comment) {}
+    rpc CreateComment(CreateCommentRequest) returns (Comment) {}
     rpc Get(IdWithRequest) returns (Comment) {}
     rpc GetAll(GetCommentQuery) returns (GetAllCommentsResult){}
     rpc Update(Comment) returns (Comment){}
