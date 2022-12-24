@@ -26,8 +26,13 @@ message CreatePost {
 
 message ChangePost {
     int64 id = 1;
+<<<<<<< HEAD
     string title = 2;
     int64 user_id = 3;
+=======
+    int64 user_id = 2;
+    string title = 3;
+>>>>>>> 2002866d4cd5586aefb9f68c08c0aad8f4eb037c
     string description = 4;
     string image_url = 5;
 }
