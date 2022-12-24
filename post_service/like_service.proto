@@ -5,9 +5,9 @@ package genproto;
 option go_package="genproto/post_service";
 
 service LikeService {
-    rpc CreateOrUpdateLike(CreateOrUpdateLikeRequest)returns(Pustoy){}
-    rpc GetLike(Get)returns (CreateOrUpdateLikeRequest){}
-    rpc GetAllLik(GetAllRequest)returns(GetAllResponse){}
+    rpc CreateOrUpdate(CreateOrUpdateLikeRequest)returns(Pustoy){}
+    rpc Get(GetLike)returns (CreateOrUpdateLikeRequest){}
+    rpc GetLikesDislikesCount(GetAllRequest)returns(GetAllResponse){}
 }
 
 message Pustoy{}
@@ -19,7 +19,7 @@ message CreateOrUpdateLikeRequest{
     bool status=4;
 }
 
-message Get{
+message GetLike{
     int64 user_id=1;
     int64 post_id=2;
 }
