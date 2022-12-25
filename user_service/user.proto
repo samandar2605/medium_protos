@@ -9,14 +9,17 @@ service UserService {
     rpc Create(CreateUser) returns (User) {}
     rpc Get(IdRequest) returns (User) {}
     rpc GetAll(GetAllUsersRequest) returns (GetAllUsersResponse){}
-    rpc Update(User)returns (User) {}
-    rpc Delete(IdRequest)returns (Empty) {}
+    rpc Update(UpdateUser)returns (User) {}
+    rpc Delete(DeleteUserRequest)returns (Empty) {}
     rpc GetByEmail(GetByEmailRequest) returns (User) {}
 }
 
 message Empty{}
 
-
+message DeleteUserRequest {
+    int64 id =1;
+    string payload_type = 2;
+}
 
 message User {
     int64 id = 1;
@@ -43,6 +46,17 @@ message CreateUser {
     string profile_image_url = 8;
     string type = 9;
     string payload_type = 10;
+}
+
+message UpdateUser {
+    int64 id = 1;
+    string first_name = 2;
+    string last_name = 3;
+    string phone_number = 4;
+    string gender = 5;
+    string username =6;
+    string profile_image_url = 7;
+    string payload_type = 8;
 }
 
 message IdRequest {
