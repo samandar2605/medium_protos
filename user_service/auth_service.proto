@@ -14,6 +14,7 @@ service AuthService{
     rpc VerifyForgotPassword(VerifyRequest) returns (AuthResponse){};
 }
 
+
 message UserEmail{
     string email = 1;
 }
