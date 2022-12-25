@@ -10,7 +10,6 @@ service UserService {
     rpc Get(IdRequest) returns (User) {}
     rpc GetAll(GetAllUsersRequest) returns (GetAllUsersResponse){}
     rpc Update(User)returns (User) {}
-    rpc UpdatePassword(NewPassword) returns (Empty){}
     rpc Delete(IdRequest)returns (Empty) {}
     rpc GetByEmail(GetByEmailRequest) returns (User) {}
 }

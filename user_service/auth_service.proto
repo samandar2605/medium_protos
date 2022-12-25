@@ -9,6 +9,7 @@ service AuthService{
     rpc Verify(VerifyRequest) returns (AuthResponse){};
     rpc Login(VerifyRequest) returns (AuthResponse){};
     rpc ForgotPassword(UserEmail) returns (Empty){};
+    rpc UpdatePassword(NewPassword) returns (Empty){}
     rpc VerifyToken(VerifyTokenRequest)returns(AuthPayload){};
     rpc VerifyForgotPassword(VerifyRequest) returns (AuthResponse){};
 }
@@ -16,6 +17,13 @@ service AuthService{
 message UserEmail{
     string email = 1;
 }
+
+message NewPassword{
+    int64 user_id = 1;
+    string password = 2;
+    string payload_type = 3;
+}
+
 
 message RegisterRequest {
     string first_name = 1;
