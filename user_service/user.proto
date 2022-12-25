@@ -18,7 +18,6 @@ message Empty{}
 
 message DeleteUserRequest {
     int64 id =1;
-    string payload_type = 2;
 }
 
 message User {
