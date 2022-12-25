@@ -19,6 +19,7 @@ message Empty{}
 message NewPassword{
     string user_id = 1;
     string password = 2;
+    string payload_type = 3;
 }
 
 message User {
